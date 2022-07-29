@@ -1,0 +1,464 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 * Copyright (C) 2009 The Sipdroid Open Source Project
+4 * 
+5 * This file is part of Sipdroid (http://www.sipdroid.org)
+6 * 
+7 * Sipdroid is free software; you can redistribute it and/or modify
+8 * it under the terms of the GNU General Public License as published by
+9 * the Free Software Foundation; either version 3 of the License, or
+10 * (at your option) any later version.
+11 * 
+12 * This source code is distributed in the hope that it will be useful,
+13 * but WITHOUT ANY WARRANTY; without even the implied warranty of
+14 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+15 * GNU General Public License for more details.
+16 * 
+17 * You should have received a copy of the GNU General Public License
+18 * along with this source code; if not, write to the Free Software
+19 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+20/////////////////////////////////////////////////////////////////////
+21// these are the main definitions of Sipdroid
+22// for modifying them additional terms according to section 7, GPL apply
+23// see ADDITIONAL_TERMS.txt
+24/////////////////////////////////////////////////////////////////////
+25-->
+26<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+27    package="org.sipdroid.sipua"
+28    android:installLocation="auto"
+29    android:versionCode="132"
+30    android:versionName="6.1 beta" >
+31
+32    <uses-sdk
+32-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:31:2-70
+33        android:minSdkVersion="11"
+33-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:31:12-38
+34        android:targetSdkVersion="30" />
+34-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:31:39-68
+35
+36    <supports-screens
+36-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:32:2-36:40
+37        android:anyDensity="false"
+37-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:36:11-37
+38        android:largeScreens="true"
+38-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:35:11-38
+39        android:normalScreens="true"
+39-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:33:11-39
+40        android:smallScreens="true" />
+40-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:34:11-38
+41
+42    <uses-feature
+42-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:37:2-84
+43        android:name="android.hardware.bluetooth"
+43-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:37:16-57
+44        android:required="false" />
+44-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:37:58-82
+45    <uses-feature
+45-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:38:2-84
+46        android:name="android.hardware.telephony"
+46-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:38:16-57
+47        android:required="false" />
+47-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:38:58-82
+48    <uses-feature
+48-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:39:2-86
+49        android:name="android.hardware.touchscreen"
+49-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:39:16-59
+50        android:required="false" />
+50-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:39:60-84
+51    <uses-feature
+51-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:40:2-79
+52        android:name="android.hardware.wifi"
+52-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:40:16-52
+53        android:required="false" />
+53-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:40:53-77
+54
+55    <uses-permission android:name="android.permission.INTERNET" />
+55-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:138:2-80
+55-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:138:19-61
+56    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+56-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:139:2-93
+56-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:139:19-74
+57    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+57-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:140:2-84
+57-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:140:19-65
+58    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+58-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:141:2-94
+58-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:141:19-75
+59    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+59-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:142:2-86
+59-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:142:19-67
+60    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+60-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:143:2-88
+60-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:143:19-69
+61    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+61-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:144:2-89
+61-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:144:19-70
+62    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+62-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:145:2-94
+62-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:145:19-75
+63    <uses-permission android:name="android.permission.READ_CONTACTS" />
+63-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:146:2-85
+63-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:146:19-66
+64    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+64-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:147:2-86
+64-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:147:19-67
+65    <uses-permission android:name="android.permission.CALL_PHONE" />
+65-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:148:2-82
+65-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:148:19-63
+66    <uses-permission android:name="android.permission.WAKE_LOCK" />
+66-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:149:2-81
+66-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:149:19-62
+67    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+67-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:150:2-88
+67-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:150:19-69
+68    <uses-permission android:name="android.permission.VIBRATE" />
+68-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:151:2-80
+68-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:151:19-60
+69    <uses-permission android:name="android.permission.BLUETOOTH" />
+69-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:152:2-82
+69-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:152:19-62
+70    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+70-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:153:2-85
+70-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:153:19-65
+71    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+71-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:154:2-89
+71-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:154:19-69
+72    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+72-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:155:2-85
+72-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:155:19-66
+73    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+73-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:156:2-86
+73-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:156:19-67
+74    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+74-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:157:2-92
+74-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:157:19-73
+75    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+75-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:158:2-98
+75-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:158:19-79
+76    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+76-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:159:2-108
+76-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:159:19-89
+77    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+77-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:160:2-90
+77-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:160:19-71
+78    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+78-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:161:2-94
+78-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:161:19-75
+79    <!--
+80	<permission android:name="org.sipdroid.sipua.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+81	<uses-permission android:name="org.sipdroid.sipua.permission.C2D_MESSAGE" />
+82	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+83    -->
+84    <application
+84-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:41:2-137:19
+85        android:debuggable="true"
+86        android:icon="@drawable/icon64"
+86-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:41:15-46
+87        android:label="@string/app_name"
+87-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:41:47-79
+88        android:theme="@android:style/Theme.Holo" >
+88-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:41:80-121
+89        <activity
+89-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:42:9-48:20
+90            android:name="org.sipdroid.sipua.ui.Sipdroid"
+90-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:42:19-64
+91            android:configChanges="orientation|keyboardHidden"
+91-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:43:10-60
+92            android:label="@string/app_name"
+92-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:42:65-97
+93            android:launchMode="singleInstance"
+93-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:42:98-133
+94            android:showOnLockScreen="true"
+94-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:43:91-122
+95            android:showWhenLocked="true" >
+95-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:43:61-90
+96            <intent-filter>
+96-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:44:13-47:29
+97                <action android:name="android.intent.action.MAIN" />
+97-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:45:17-69
+97-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:45:25-66
+98
+99                <category android:name="android.intent.category.LAUNCHER" />
+99-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:46:17-77
+99-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:46:27-74
+100            </intent-filter>
+101        </activity>
+102        <activity
+102-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:49:9-57:20
+103            android:name="org.sipdroid.sipua.ui.PSTN"
+103-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:49:19-60
+104            android:icon="@drawable/ic_launcher_phone"
+104-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:50:10-52
+105            android:label="@string/pstn_name" >
+105-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:49:61-94
+106            <intent-filter>
+106-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:51:13-56:29
+107                <action android:name="android.intent.action.SENDTO" />
+107-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:52:17-71
+107-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:52:25-68
+108
+109                <category android:name="android.intent.category.DEFAULT" />
+109-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:17-76
+109-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:27-73
+110
+111                <data android:scheme="sms" />
+111-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+111-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+112                <data android:scheme="smsto" />
+112-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+112-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+113            </intent-filter>
+114        </activity>
+115        <activity
+115-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:58:9-65:20
+116            android:name="org.sipdroid.sipua.ui.SIP"
+116-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:58:19-59
+117            android:label="@string/app_name" >
+117-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:58:60-92
+118            <intent-filter>
+118-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:51:13-56:29
+119                <action android:name="android.intent.action.SENDTO" />
+119-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:52:17-71
+119-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:52:25-68
+120
+121                <category android:name="android.intent.category.DEFAULT" />
+121-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:17-76
+121-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:27-73
+122
+123                <data android:scheme="sms" />
+123-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+123-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+124                <data android:scheme="smsto" />
+124-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+124-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+125            </intent-filter>
+126        </activity>
+127        <activity
+127-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:66:9-101
+128            android:name="org.sipdroid.sipua.ui.AutoAnswer"
+128-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:66:19-66
+129            android:label="@string/app_name" />
+129-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:66:67-99
+130        <activity
+130-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:67:9-104
+131            android:name="org.sipdroid.sipua.ui.ChangeAccount"
+131-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:67:19-69
+132            android:label="@string/app_name" />
+132-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:67:70-102
+133        <activity
+133-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:68:9-94:20
+134            android:name="org.sipdroid.sipua.ui.SIPUri"
+134-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:68:19-62
+135            android:label="@string/app_name"
+135-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:68:63-95
+136            android:theme="@android:style/Theme.Dialog" >
+136-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:69:11-54
+137            <intent-filter>
+137-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:70:13-75:29
+138                <action android:name="android.intent.action.CALL" />
+138-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:71:17-69
+138-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:71:25-66
+139
+140                <category android:name="android.intent.category.DEFAULT" />
+140-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:17-76
+140-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:27-73
+141
+142                <data android:scheme="sip" />
+142-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+142-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+143                <data android:scheme="sipdroid" />
+143-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+143-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+144            </intent-filter>
+145            <intent-filter>
+145-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:76:13-83:29
+146                <action android:name="android.intent.action.SENDTO" />
+146-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:52:17-71
+146-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:52:25-68
+147                <action android:name="android.intent.action.VIEW" />
+147-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:78:17-69
+147-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:78:25-66
+148
+149                <category android:name="android.intent.category.DEFAULT" />
+149-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:17-76
+149-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:27-73
+150                <category android:name="android.intent.category.BROWSABLE" />
+150-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:80:17-78
+150-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:80:27-75
+151
+152                <data android:scheme="imto" />
+152-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+152-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+153                <data android:scheme="sip" />
+153-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+153-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+154            </intent-filter>
+155            <intent-filter>
+155-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:84:13-88:29
+156                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+156-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:85:17-80
+156-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:85:25-77
+157
+158                <category android:name="android.intent.category.DEFAULT" />
+158-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:17-76
+158-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:27-73
+159
+160                <data android:scheme="sip" />
+160-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+160-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+161            </intent-filter>
+162            <intent-filter>
+162-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:89:13-93:20
+163                <action android:name="android.intent.action.VIEW" />
+163-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:78:17-69
+163-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:78:25-66
+164
+165                <category android:name="android.intent.category.DEFAULT" />
+165-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:17-76
+165-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:53:27-73
+166
+167                <data android:mimeType="vnd.android.cursor.item/name" />
+167-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+167-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:92:14-61
+168            </intent-filter>
+169        </activity>
+170        <activity
+170-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:95:9-96:69
+171            android:name="org.sipdroid.sipua.ui.Activity2"
+171-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:95:19-65
+172            android:excludeFromRecents="true"
+172-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:96:10-43
+173            android:label="@string/app_name"
+173-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:95:66-98
+174            android:taskAffinity="" />
+174-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:96:44-67
+175        <activity
+175-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:97:9-100:20
+176            android:name="org.sipdroid.sipua.ui.Settings"
+176-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:97:19-64
+177            android:configChanges="orientation|keyboardHidden"
+177-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:98:10-60
+178            android:label="@string/app_name" >
+178-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:97:65-97
+179        	android:excludeFromRecents="true" android:taskAffinity="">
+180        </activity>
+181        <activity
+181-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:101:9-104:20
+182            android:name="org.sipdroid.codecs.Codecs$CodecSettings"
+182-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:102:5-60
+183            android:label="@string/app_name" >
+183-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:103:5-37
+184        </activity>
+185        <activity
+185-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:105:9-108:20
+186            android:name="org.sipdroid.sipua.ui.InCallScreen"
+186-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:105:19-68
+187            android:excludeFromRecents="true"
+187-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:106:10-43
+188            android:label="@string/app_name"
+188-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:105:69-101
+189            android:launchMode="singleInstance"
+189-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:107:10-45
+190            android:showOnLockScreen="true"
+190-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:107:76-107
+191            android:showWhenLocked="true"
+191-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:107:46-75
+192            android:taskAffinity="" >
+192-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:106:44-67
+193        </activity>
+194
+195        <receiver
+195-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:109:6-82
+196            android:name="org.sipdroid.sipua.ui.OneShotAlarm"
+196-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:109:16-47
+197            android:label="@string/app_name" />
+197-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:109:48-80
+198        <receiver
+198-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:110:6-83
+199            android:name="org.sipdroid.sipua.ui.OneShotAlarm2"
+199-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:110:16-48
+200            android:label="@string/app_name" />
+200-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:110:49-81
+201        <receiver
+201-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:111:6-79
+202            android:name="org.sipdroid.sipua.ui.LoopAlarm"
+202-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:111:16-44
+203            android:label="@string/app_name" />
+203-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:111:45-77
+204        <receiver
+204-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:112:6-77
+205            android:name="org.sipdroid.sipua.ui.OwnWifi"
+205-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:112:16-42
+206            android:label="@string/app_name" />
+206-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:112:43-75
+207        <receiver
+207-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:113:6-117:17
+208            android:name="org.sipdroid.sipua.ui.Caller"
+208-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:113:16-41
+209            android:label="@string/app_name" >
+209-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:113:42-74
+210            <intent-filter android:priority="-1" >
+210-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:114:10-116:26
+210-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:114:25-46
+211                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+211-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:115:11-76
+211-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:115:19-73
+212            </intent-filter>
+213        </receiver>
+214        <receiver
+214-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:118:9-129:17
+215            android:name="org.sipdroid.sipua.ui.Receiver"
+215-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:118:19-46
+216            android:enabled="true"
+216-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:118:47-69
+217            android:label="@string/app_name" >
+217-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:118:70-102
+218            <intent-filter>
+218-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:119:9-123:25
+219                <action android:name="android.intent.action.BOOT_COMPLETED" />
+219-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:120:11-73
+219-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:120:19-70
+220                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+220-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:121:11-90
+220-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:121:19-87
+221                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+221-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:122:11-92
+221-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:122:19-89
+222            </intent-filter>
+223            <intent-filter>
+223-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:124:9-128:25
+224                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+224-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:125:11-75
+224-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:125:19-72
+225
+226                <data android:scheme="package" />
+226-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+226-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:23-43
+227                <data android:path="org.sipdroid.sipua" />
+227-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:54:17-46
+227-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:127:17-50
+228            </intent-filter>
+229        </receiver>
+230        <receiver android:name="org.sipdroid.sipua.ui.PhoneStart" >
+230-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:130:9-135:20
+230-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:130:19-66
+231            <intent-filter>
+231-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:131:13-134:29
+232                <action android:name="org.sipdroid.START_SIPDROID" />
+232-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:132:17-70
+232-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:132:25-67
+233                <action android:name="org.sipdroid.STOP_SIPDROID" />
+233-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:133:17-69
+233-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:133:25-66
+234            </intent-filter>
+235        </receiver>
+236
+237        <service
+237-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:136:9-87
+238            android:name="org.sipdroid.sipua.ui.RegisterService"
+238-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:136:18-52
+239            android:label="@string/app_name" />
+239-->F:\zhihui\poc\sipdroid\app\src\main\AndroidManifest.xml:136:53-85
+240    </application>
+241
+242</manifest>

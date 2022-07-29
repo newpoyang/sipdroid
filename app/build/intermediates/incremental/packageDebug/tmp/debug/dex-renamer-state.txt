@@ -1,0 +1,4 @@
+#Fri Jul 29 11:27:24 GMT+08:00 2022
+base.0=F\:\\zhihui\\poc\\sipdroid\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

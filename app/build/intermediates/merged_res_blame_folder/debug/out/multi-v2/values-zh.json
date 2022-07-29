@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\zhihui\\poc\\sipdroid\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "F:\\zhihui\\poc\\sipdroid\\app\\src\\main\\res\\values-zh\\strings.xml",
+                    "from": {
+                        "startLines": "3,4,5,6,7,8,9,10,11,12,14,15,13",
+                        "startColumns": "2,2,2,2,2,2,2,2,2,2,2,2,2",
+                        "startOffsets": "171,225,276,330,385,437,477,522,562,602,685,752,645",
+                        "endColumns": "52,49,52,53,50,38,43,38,38,41,65,59,38",
+                        "endOffsets": "221,272,326,381,433,473,518,558,598,641,748,809,681"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,110,162,217,273,326,367,413,454,495,539,607,669",
+                        "endColumns": "54,51,54,55,52,40,45,40,40,43,67,61,40",
+                        "endOffsets": "105,157,212,268,321,362,408,449,490,534,602,664,705"
+                    }
+                }
+            ]
+        }
+    ]
+}
